@@ -190,6 +190,11 @@
   },
   "active": "990245877ac1c921",
   "lastOpenFiles": [
+    "Shopping_app/templates/store/product_detail.html",
+    "Shopping_app/static/default.jpg",
+    "Shopping_app/static/kehong chen.jpg",
+    "Shopping_app/kehong chen.jpg",
+    "Shopping_app/templates/store/store.html",
     "Shopping_app/__pycache__/forms.cpython-313.pyc",
     "Shopping_app/templates/store/main.html",
     "Shopping_app/templates/store",
@@ -198,8 +203,6 @@
     "Shopping_app/forms.py",
     "db.sqlite3-journal",
     "Shopping_app/migrations/__pycache__/0002_product_brand_product_category_product_condition_and_more.cpython-313.pyc",
-    "Shopping_app/migrations/0002_product_brand_product_category_product_condition_and_more.py",
-    "Shopping_app/migrations/__pycache__/0001_initial.cpython-313.pyc",
-    "Shopping_app/static"
+    "Shopping_app/migrations/0002_product_brand_product_category_product_condition_and_more.py"
   ]
 }

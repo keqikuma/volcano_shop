@@ -1,0 +1,51 @@
+{% extends "store/main.html" %}
+{% load static %}
+
+{% block content %}
+<h2>商品列表</h2>
+
+<form method="GET" action="{% url 'store' %}" class="form-inline mb-4">
+  <input type="text" name="query" class="form-control mr-2" placeholder="搜索商品..." value="{{ query }}">
+  <button type="submit" class="btn btn-primary">搜索</button>
+</form>
+
+<div class="row">
+  {% for product in page_obj %}
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        {% if product.image %}
+          <img src="{{ product.image.url }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+        {% else %}
+          <img src="{% static 'default.jpg' %}" class="card-img-top" style="height: 200px; object-fit: cover;">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text text-muted">{{ product.brand }} - {{ product.condition }}</p>
+          <p class="card-text"><strong>{{ product.price }} 元</strong></p>
+          <p class="card-text">卖家：{{ product.seller.username }}</p>
+          <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-primary btn-sm">查看详情</a>
+
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="mt-4">
+  <nav>
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page=1">&laquo;</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">上一页</a></li>
+      {% endif %}
+
+      <li class="page-item active"><span class="page-link">{{ page_obj.number }}</span></li>
+
+      {% if page_obj.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">下一页</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</div>
+{% endblock %}
