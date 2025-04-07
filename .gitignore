@@ -1,0 +1,11 @@
+# 环境
+.venv/
+env/
+venv/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+.DS_Store
+.obsidian
