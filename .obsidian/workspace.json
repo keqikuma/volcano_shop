@@ -98,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "edd6d90f4b075f8d",
@@ -190,6 +191,11 @@
   },
   "active": "990245877ac1c921",
   "lastOpenFiles": [
+    "Shopping_app/templates/store/my_products.html",
+    "media/product_images/linux.png",
+    "media/product_images",
+    "Shopping_app/templates/accounts/register.html",
+    "Shopping_app/templates/accounts",
     "Shopping_app/templates/store/product_detail.html",
     "Shopping_app/static/default.jpg",
     "Shopping_app/static/kehong chen.jpg",
@@ -199,10 +205,6 @@
     "Shopping_app/templates/store/main.html",
     "Shopping_app/templates/store",
     "Shopping_app/templates/upload_product.html",
-    "Shopping_app/templates",
-    "Shopping_app/forms.py",
-    "db.sqlite3-journal",
-    "Shopping_app/migrations/__pycache__/0002_product_brand_product_category_product_condition_and_more.cpython-313.pyc",
-    "Shopping_app/migrations/0002_product_brand_product_category_product_condition_and_more.py"
+    "Shopping_app/templates"
   ]
 }

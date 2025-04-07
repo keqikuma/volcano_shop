@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 from .models import Product
 from django.db.models import Q
 
-@login_required
+@login_required(login_url='login')
 def upload_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -42,3 +42,9 @@ def store(request):
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     return render(request, 'store/product_detail.html', {'product': product})
+
+
+@login_required(login_url='login')
+def my_products(request):
+    products = Product.objects.filter(seller=request.user).order_by('-created_at')
+    return render(request, 'store/my_products.html', {'products': products})

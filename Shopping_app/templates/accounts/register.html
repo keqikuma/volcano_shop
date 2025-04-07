@@ -1,0 +1,9 @@
+{% extends 'store/main.html' %}
+{% block content %}
+<h2>注册账号</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-success">注册</button>
+</form>
+{% endblock %}
